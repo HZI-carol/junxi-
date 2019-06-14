@@ -1,0 +1,247 @@
+
+@import "./var"
+.type-title
+  height 50px
+  line-height 50px
+  border-bottom 1px dashed #e6e7ec
+  font-size 18px
+  color #353535
+  padding-left 30px
+  margin-bottom 20px
+.a
+  color $blue
+  display inline-block
+  cursor pointer
+
+.el-tabs
+  &.el-tabs--border-card
+    box-shadow: none!important
+    border none!important
+  .el-tabs__item
+    text-align center
+    position relative
+    &.is-active
+      min-width 140px
+    &:hover
+      .el-icon-edit,.el-icon-close
+        display inline-block
+    .el-input
+      width 100px
+    .el-icon-edit,.el-icon-close
+      position absolute
+      top 51%
+      transform translateY(-50%)
+    .el-icon-edit
+      left 2px
+      display none
+      border-radius: 50%;
+      padding 1px
+      transition: all .3s cubic-bezier(.645,.045,.355,1);
+      &:hover
+        color #fff
+        background-color $success
+    .el-icon-close
+      right 2px
+      display none
+      padding 1px
+      &:hover
+        background-color $danger
+  .el-tabs__content
+    min-height: calc(100vh - 89px - 80px)
+    padding-bottom 20px
+  .el-tabs__header
+    min-height 39px
+
+
+.red
+  color $danger!important
+.green
+  color $success!important
+.warning
+  color $warning!important
+.wrapper
+  margin 0 15px
+
+
+//breadcrumb animate
+.slide-fade-enter-active 
+  transition: all .3s 0.3s ease
+
+.slide-fade-leave-active 
+  transition: all .3s ease
+
+.slide-fade-enter, .slide-fade-leave-to
+  transform: translateX(10px)
+  opacity: 0
+// fade-transform
+.fade-transform-leave-active,
+.fade-transform-enter-active 
+  transition: all .2s
+.fade-transform-enter
+  transform: translateX(-30px)
+  opacity 0
+.fade-transform-leave-to 
+  opacity 0
+  transform: translateX(30px)
+
+// 覆盖element-ui hover 菜单样式
+.el-menu--popup
+  .router-link-active
+    &>.el-menu-item
+      color $blue!important
+      background-color rgb(38, 46, 62)!important
+      i 
+        color $blue!important
+
+  .el-menu-item
+    color rgb(191, 203, 217)!important
+    i 
+      color rgb(191, 203, 217)!important
+      margin-right 10px
+    
+.el-submenu__title
+  padding 0 10px
+  i.iconfont
+    margin 0 5px!important
+    color #bfcbd9
+  span
+    color #bfcbd9
+// 翻页
+.el-pagination
+  margin-top 20px
+  display inline-block
+.el-dialog,.el-dialog.el-dialog--center
+  .el-dialog__header
+    background-color #f0f3f4
+  .el-dialog__body
+    padding 0
+  .el-dialog__footer
+    padding 10px
+    height 60px
+    box-sizing border-box
+    background #f0f3f4
+    .dialog-footer
+      line-height 40px
+      height 100%
+      .el-pagination
+        height 35px
+        margin-top 10px
+
+.dialog-content
+  height: 420px
+  overflow-y auto
+  box-sizing: border-box
+
+  .menu
+    height: 40px
+    margin-left: -20px
+    margin-right: -20px
+    border-top: 1px solid #ddd
+    border-bottom: 1px solid #ddd
+    background-color: #f0f3f4
+    .menu-list
+      & > li, .menu-list-item
+        display: inline-block
+        padding: 0 15px
+        line-height: 40px
+        font-size: 12px
+        cursor: pointer
+        &.active
+          background-color: #fff
+          height: 41px
+
+// 表头颜色
+.el-table 
+  border 1px solid #eee
+  tr
+    th
+      background-color $table-head
+
+// 表头搜索等
+.tab-options
+  line-height 40px
+  padding 0 10px
+  color #999
+  background-color $table-head
+  border-bottom 1px solid #fff
+  &>div
+    display inline-block
+  .el-button
+    margin-right 10px
+  .label
+    display inline-block
+    margin-right 10px
+  .item
+    &>*
+      margin-right 10px
+    .el-select
+      width 150px
+      .el-input
+        width 100%
+    .el-input
+      width 200px
+  // .submit-button
+
+// 订单详情对话框
+.detail-dialog
+  .order-info
+    display flex
+    flex-wrap wrap
+    background-color rgba($table-head, 0.41)
+    .item
+      width 50%
+      display flex
+      padding  0 10px
+      border-bottom 1px solid #ddd
+      line-height 40px
+      img
+        width 40px
+        height 40px
+        margin 2px 0
+      .label
+        font-weight 700
+        margin-right 10px
+        width 90px
+        display inline-block
+        text-align right
+  .goods-name
+    display flex
+    align-items center
+    img
+      width 40px
+      height 40px
+      margin-right 10px
+// 无数据
+.null
+  font-size 16px
+  color #999
+
+// 饿了么输入框默认宽度
+.router-view
+  .el-input
+    width 200px
+    .el-input__suffix,.el-input__suffix-inner
+      display flex
+      align-items center
+      .amount
+        display inline-block
+        background-color #fff
+        height 30px
+        line-height 30px
+  .el-textarea
+    width 300px
+.el-upload
+  .el-icon-plus
+    color #888!important
+    text-shadow 0 0 10px rgba(#fff, 0.8)
+  .el-upload-dragger
+    .el-upload__text
+      font-size 16px
+.hover-scale
+  transition all 0.1s
+  &:hover
+    transform scale(1.02)
+    box-shadow 0 2px 10px 0 rgba(30,13,4,.15)
+
+.el-date-editor .el-range-separator 
+  padding 0!important
